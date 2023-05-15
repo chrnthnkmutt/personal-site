@@ -26,4 +26,4 @@ you can run my website by click on this link: https://boatchrnthn.netlify.app/
 [MIT](https://choosealicense.com/licenses/mit/)
 ```
 
-![alt text](mobile.png)
+![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
