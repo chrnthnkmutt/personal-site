@@ -1880,3 +1880,27 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+a:link {
+  color: whitesmoke;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: whitesmoke;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(45, 100%, 71%);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: whitesmoke;
+  background-color: transparent;
+  text-decoration: underline;
+}
