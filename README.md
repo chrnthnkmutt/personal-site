@@ -26,5 +26,4 @@ you can run my website by click on this link: https://boatchrnthn.netlify.app/
 [MIT](https://choosealicense.com/licenses/mit/)
 ```
 
-https://github.com/chrnthnkmutt/personal-site/blob/46c3fc2e04525cdb304451df542e4d6c1b0c81fc/website-demo-image/desktop.png
-https://github.com/chrnthnkmutt/personal-site/blob/46c3fc2e04525cdb304451df542e4d6c1b0c81fc/website-demo-image/mobile.png
+![alt text](https://github.com/chrnthnkmutt/personal-site/blob/46c3fc2e04525cdb304451df542e4d6c1b0c81fc/website-demo-image/mobile.png)
