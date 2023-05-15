@@ -10,3 +10,21 @@ I use the font-awesome to help me to design my website, which I actually use the
 Also, there is no need to worry about the responsive of my website because I use the bootstrap framework to help me to design, and
 no need to install any software to run my website because I use the GitHub page to help me to run my website, also I just install only
 visual studio code to help me to code my website.
+
+## How to run my website
+you can run my website by click on this link: https://boatchrnthn.netlify.app/
+
+## How to use my website
+- You can click on the navigation bar to go to the page that you want to go.
+
+## How to contact me
+- You can contact me by email: boat.charunthon@gmail.com
+
+### I don't let anyone to code my website without my permission
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+```
+
+https://github.com/chrnthnkmutt/personal-site/blob/46c3fc2e04525cdb304451df542e4d6c1b0c81fc/website-demo-image/desktop.png
+https://github.com/chrnthnkmutt/personal-site/blob/46c3fc2e04525cdb304451df542e4d6c1b0c81fc/website-demo-image/mobile.png
