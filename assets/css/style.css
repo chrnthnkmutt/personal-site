@@ -74,7 +74,7 @@
    */
 
   /* font-family */
-  --ff-prompt: 'prompt', sans-serif;
+  --ff-ChakraPetch: 'Chakra Petch', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -153,7 +153,7 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-prompt); }
+html { font-family: var(--ff-ChakraPetch); }
 
 body { background: var(--smoky-black); }
 
