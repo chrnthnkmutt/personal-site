@@ -1,62 +1,954 @@
 <!DOCTYPE html>
-<html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+<html lang="en">
 
-.bgimg {
-  background-image: url('/w3images/forestbridge.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: rgb(247, 126, 78);
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charunthon Limseelo ⛵</title>
+  
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/removelogo.ico" type="image/x-icon">
 
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
 <body>
 
-<div class="bgimg">
-  <div class="topleft">
-    <p>Charunthon Limseelo</p>
-  </div>
-  <div class="middle">
-    <h1>A Little Construction...Coming Back soon</h1>
-    <hr>
-    <p>2 days</p>
-  </div>
-  <div class="bottomleft">
-    <p>Some text</p>
-  </div>
-</div>
+  <!--
+    - #MAIN
+  -->
+  
+  <main>
+    
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-photo.png" alt="Charunthon Limseelo" width="70">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Charunthon Limseelo">Charunthon Limseelo</h1>
+
+          <p class="title">CPE36 KMUTT</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:boat.charunthon@gmail.com" class="contact-link">boat.charunthon@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+66988253069" class="contact-link">(+66)98-8253069</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2004-05-16">May 16, 2004</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Samut Prakan, Thailand</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/boatchrnthn/" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/boatchrnthn" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/boatchrnthn/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.twitter.com/boatchrnthn/" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.medium.com/@boatchrnthn/" class="social-link">
+              <ion-icon name="logo-medium"></ion-icon>
+            </a>
+          </li>
+
+          &nbsp;
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+          Hello, I'm Charunthon Limseelo, you can call me Boat/Chris, nice to meet you all. Here are some information from me to know about:
+          </p>
+          <p>🌍  I'm based in Thailand</p>
+          <p>🚀  I'm currently working on Microsoft Learn Student Ambassadors</p>
+          <p>🧠  I'm learning on Computer Engineering (International Program) at King Mongkut's University of Technology Thonburi</p>
+          <p>🤝  I'm open to collaborating on Artificial Intelligence, Data Analysis for Data Engineering, and cloud computing for web application with public and private organization</p>
+          <p>⚡  Currently, I have many tasks to serve Thai people within the name of Bangkok Metropolitan Administration, BorntoDev, Microsoft, Creatorsgarten, and more</p>
+          <p><a href="https://boatchrnthn.notion.site">🌐 Know me more, please click on my Notion site.</a></p>
+          </p>
+
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">My interesting fields and skills</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">UX/UI Design</h4>
+
+                <p class="service-item-text">
+                  I have some experience of making the design of the application and website for education purpose.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  With optionally, I can make the website for you with HTML, CSS, and JavaScript, as being a front-end developer.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android, using flutter and dart. And also, I can make by using MIT App Inventor.
+                </p>
+              </div>
+
+            </li>
+
+          </li>
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-ai.svg" alt="mobile app icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">AI, ML, and Data Analysis</h4>
+
+              <p class="service-item-text">
+                I have some experience of making the AI model for the future, also dealing with Machine Learning for making data visuals.
+            </div>
+
+          </li>            
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category as my hobby and interesting field.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://boatchrnthn.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff59cef3a-f063-4e33-b51b-af9145d9b64d%2FUntitled.png?table=block&id=5496e4cb-88eb-4b22-a0be-1ca134a80d48&spaceId=dc9f3c9a-ac9d-4d06-b551-6ddd8dfd0ebf&width=70&userId=&cache=v2" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Engineering</h4>
+
+                <p class="service-item-text">
+                  As I interest from what I did from AI and cloud solution on Azure. This would sum up on my interesting fields for my jobs.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - Collaborators
+        -->
+
+        <section class="testimonials">
+
+          
+          <h3 class="h3 testimonials-title">Top Collaborators</h3>
+
+          <section class="about-text">
+            <a href="https://boatchrnthn.notion.site/Hall-of-Collaborators-81e162026acf409d835e10c5a7dd8821">🧑‍🤝‍🧑 For all collaborators please click here : Hall of Collaborators</a>
+          </section>
+
+          &nbsp;
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="https://boatchrnthn.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F25008593-8af4-4afd-9bf4-ea2f8655de98%2Fchanidapa.png?table=block&id=e0a74d4e-a53b-4eae-9389-71c33f9bb986&spaceId=dc9f3c9a-ac9d-4d06-b551-6ddd8dfd0ebf&width=1110&userId=&cache=v2" alt="Chanidapa Chanama" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Chanidapa Chanama</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    P’Kim Chanidapa becomes major collaborator and contribute in many projects, not only in KMUTT. Later, 
+                    Chanidapa continue her developer journey until nowadays.
+                    <br> <br> 
+                    <a href="https://www.instagram.com/chk_hackbrett/" class="social-link"> <ion-icon name="logo-instagram"></ion-icon></a>
+                    <br>
+                    <a href="https://www.facebook.com/Kimchanidapa" class="social-link"> <ion-icon name="logo-facebook"></ion-icon></a>
+                    <br>
+                    <a href="https://www.linkedin.com/in/chanidapa-chanama-741526231/" class="social-link"> <ion-icon name="logo-linkedin"></ion-icon></a>
+                  </p> 
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+         <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+              <br/>
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - Connections
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Connections</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://www.microsoft.com/en-us/">
+                <img src="./assets/images/Microsoft_logo_(2012).png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://creatorsgarten.org/">
+                <img src="https://creatorsgarten.org/images/creatorsgarten.svg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://sevenpeakssoftware.com/">
+                <img src="https://sevenpeakssoftware.com/hubfs/Seven%20Peaks%20Assets/Brand/Clip%20path%20group.svg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.borntodev.com/">
+                <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2018/09/Black_Yellow_white-12-re.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <section class="playlist">
+          <h3 class="h3 playlist-title">My Playlist</h3>
+          <br>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/00XDsMqb0QeZbuJeVXlsOx?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <br>
+          <br>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1oV7rQRQfjzV0honn4njbz?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </section>
+      </article>
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="about-text">
+          <a href="https://boatchrnthn.notion.site/Resume-a236adc584fa4bf18e68b0b601d25dba?pvs=4">My Full Resume Click Here 👆</a>
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">King Mongkut's University of Technology Thonburi</h4>
+
+              <span>2022 - Present</span>
+
+              <p class="timeline-text">
+              At this moment, I am studying in the second year of my bachelor's degree in Computer Engineering (International Program) or CPE at KMUTT.
+              </p>
+              &nbsp;
+              <p class="timeline-text">
+              During these year, I would have some collaborations with profeesors and friends in order to do some projects.
+              </p>
+
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Assumption College Samutprakarn</h4>
+
+              <span>2010 - 2022</span>
+
+              <p class="timeline-text">
+                I've studied in this school since I was in Primary 1. I've learned many things from this school and I've met many friends. Also,
+                This place is a start of my journey to learn English, Computer Science, and creating many innovations for the school education.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="desktop-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Microsoft Learn Student Ambassadors</h4>
+
+              <span>2023 — Present</span>
+              <p class="timeline-text">
+                I start my career in Microsoft Thailand as Learn Student Ambassadors in April 2023.
+                And my recent milestone is Alpha Phase. In this phase, I would go to have some collaboration and
+                training in new session. In the session that I improvise is Artificial Intelligence and Machine Learning.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Application Developer and Designer</h4>
+
+              <span>2018 - Present</span>
+
+              <p class="timeline-text">
+                > Developed and executed functional mobile applications for productivity purpose in schools and daily life using flutter.
+              </p>
+              &nbsp;
+              <p class="timeline-text">
+                 > In the application that I did is about the school education. I've created many applications for my school and I've got many awards from it,
+                even from the Ministry of Education in Thailand, and international stage like Türkiye.
+              </p>
+              &nbsp;
+              <p class="timeline-text">
+                > Evaluated new client requirements, defined use cases and maintained a local testing environment with schools, and other specific clients, with usability testing and evaluation.
+              </p>
+              &nbsp;
+              <p class="timeline-text">
+                > UX/UI Designer and Being Teacher Assistant on CPE123 at KMUTT.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Talks and Discussion</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Enrich Power BI Report with Azure Machine Learning</h4>
+
+              <span>August 26th, 2023 @Seven Peaks</span>
+              <p class="timeline-text">
+                Discussing about the work integration between using Azure Machine Learning to train the prediction graph on Power BI.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">The Fundamentals of Making Application Using MIT App Inventor and Cross-platform Thunkable</h4>
+
+              <span>2019 @Assumption College Samutprakarn</span>
+              <p class="timeline-text">
+                Discussing about how we make the simple application without coding, and can be use it in real life on Android and iOS.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web Design (Front-End): HTML, JS, CSS</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Applications design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Data Visualization</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Arduino</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Presentation & Technical Report/Blog Writing</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Quantum Computing: Q#</h5>
+                <data value="30">30%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 30%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Data Work Projects</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Electric Design Projects</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+  
+              <li class="select-item">
+                <button data-filter-btn>Web design</button>
+              </li>
+  
+              <li class="select-item">
+                <button data-filter-btn>Applications design</button>
+              </li>
+  
+              <li class="select-item">
+                <button data-filter-btn>Data Work Projects</button>
+              </li>
+  
+              <li class="select-item">
+                <button data-filter-btn>Electric Design Projects</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://www.figma.com/file/LlikKfAL64rbimOkcQySLX/Online-Learning-Platform-(Community)?type=design&node-id=0%3A1&t=En40SYqB2IAFjUno-1">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">LearnEX - Course Learning Platform</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/chrnthnkmutt/personal-site">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Charunthon Limseelo - Personal Portfolio</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog / External Links</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://boatchrnthn.notion.site/My-CPE-International-KMUTT-Student-Dashboard-713c513d1b0c4e9991875ba832317213?pvs=4">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="CPE KMUTT Notion Dashboard" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <h3 class="h3 blog-item-title">CPE KMUTT Notion Dashboard</h3>
+
+                  <p class="blog-text">
+                    Collecting all the course materials and resources for CPE KMUTT batch 36 (International Section).
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://medium.com/@boatchrnthn">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Medium Story Collection" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <h3 class="h3 blog-item-title">Medium Story Collection</h3>
+
+                  <p class="blog-text">
+                    Collecting all stories that I have written on Medium even about my life, my experience at Microsoft, and my knowledge.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+            
+            <li class="blog-post-item">
+              <a href="https://acspacth-my.sharepoint.com/:f:/g/personal/s13013_acsp_ac_th/EjuLLbYXdxBAkJeXMkDmXoABTOtFg4Z1xBn9tr86e5fsHA?e=emIvbz">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Images Together With Me" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <h3 class="h3 blog-item-title">Images Together With Me</h3>
+
+                  <p class="blog-text">
+                    Gathering all images that I have taken and edited by myself, saved in OneDrive. Even at ACSP or KMUTT.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>  
+
+            <li class="blog-post-item">
+              <a href="https://github.com/chrnthnkmutt">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="My GitHub Repository" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <h3 class="h3 blog-item-title">My GitHub Repository</h3>
+
+                  <p class="blog-text">
+                    My code collection in many projects on Computer Engineering and Microsoft Events.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>

@@ -1903,7 +1903,7 @@ a:hover {
 }
 
 a:active {
-  color: whitesmoke;
+  color: rgb(245, 245, 245);
   background-color: transparent;
   text-decoration: underline;
 }
