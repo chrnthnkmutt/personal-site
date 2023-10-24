@@ -12,7 +12,7 @@ no need to install any software to run my website because I use the GitHub page 
 visual studio code to help me to code my website.
 
 ## How to run my website
-you can run my website by click on this link: https://boatchrnthn.netlify.app/
+you can run my website by click on this link: https://boatchrnthn.vercel.app/
 
 ## How to use my website
 - You can click on the navigation bar to go to the page that you want to go.
