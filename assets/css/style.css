@@ -6,11 +6,7 @@
 /**
  * copyright 2022 @codewithsadee
  */
-
-
-
-
-
+ 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
@@ -35,12 +31,12 @@
   ), hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    #EF7623 0%, 
+    #23ef89 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    #EF7623 0%, 
+    #23ef75 0%, 
     hsla(35, 100%, 68%, 0) 59.86%
   ), hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(
@@ -50,31 +46,31 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    #EF7623, 
-    #EF7623
+    #2aef23, 
+    #23deef
   );
 
   /* solid */
 
   --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
+  --onyx: hsl(240, 1%, 18%);
+  --eerie-black-1: hsl(240, 1%, 17%);
+  --eerie-black-2: hsl(0, 0%, 28%);
   --smoky-black: hsl(0, 0%, 77%); /* background */
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: #EF7623; 
-  --vegas-gold: #EF7623 ;
+  --orange-yellow-crayola: #23efab; 
+  --vegas-gold: #23ef75 ;
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --bittersweet-shimmer: hsl(166, 43%, 51%);
 
   /**
    * typography
    */
 
   /* font-family */
-  --ff-ChakraPetch: 'Chakra Petch', sans-serif;
+  --ff-family: 'Chakra Petch', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -156,7 +152,7 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-ChakraPetch); }
+html { font-family: var(--ff-family); }
 
 body { background: var(--smoky-black); }
 
@@ -1897,7 +1893,7 @@ a:visited {
 }
 
 a:hover {
-  color: hsl(45, 100%, 71%);
+  color: hsl(168, 100%, 71%);
   background-color: transparent;
   text-decoration: underline;
 }
