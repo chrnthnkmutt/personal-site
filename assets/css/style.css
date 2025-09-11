@@ -1903,3 +1903,213 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+
+/* Additional styles for new academic sections */
+
+/**
+ * Timeline Links
+ */
+
+.timeline-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.timeline-link {
+  padding: 5px 12px;
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+  font-size: var(--fs-8);
+  color: var(--light-gray-70);
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.timeline-link:hover {
+  background: var(--bg-gradient-yellow-1);
+  color: var(--smoky-black) !important;
+  border-color: var(--orange-yellow-crayola);
+  text-decoration: none !important;
+}
+
+/**
+ * Blog Posts
+ */
+
+.blog-posts { margin-bottom: 30px; }
+
+.blog-posts-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.blog-post-item { 
+  position: relative;
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+}
+
+.blog-post-item:hover { 
+  border-color: var(--orange-yellow-crayola);
+  transform: translateY(-2px);
+}
+
+.blog-post-item > a { 
+  display: block;
+  text-decoration: none;
+}
+
+.blog-banner-box {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.blog-banner-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-1);
+}
+
+.blog-post-item:hover .blog-banner-box img { 
+  transform: scale(1.1); 
+}
+
+.blog-content { 
+  padding: 15px; 
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+
+.blog-meta .dot {
+  background: var(--light-gray-70);
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.blog-meta time {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+}
+
+.blog-category {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  margin: 0;
+}
+
+.blog-item-title {
+  margin-bottom: 10px;
+  color: var(--white-1);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  line-height: 1.3;
+}
+
+.blog-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/**
+ * CV Download Button
+ */
+
+.cv-download {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--bg-gradient-yellow-1);
+  color: var(--smoky-black);
+  border-radius: 14px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  text-decoration: none;
+  transition: var(--transition-1);
+  border: 1px solid var(--orange-yellow-crayola);
+}
+
+.cv-download-btn:hover {
+  background: var(--bg-gradient-yellow-2);
+  color: var(--white-1) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+  text-decoration: none !important;
+}
+
+.cv-download-btn ion-icon {
+  font-size: 18px;
+}
+
+/**
+ * Responsive Design for New Sections
+ */
+
+@media (min-width: 580px) {
+
+  .blog-posts-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .timeline-links {
+    gap: 20px;
+  }
+
+  .timeline-link {
+    padding: 8px 16px;
+    font-size: var(--fs-7);
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .blog-posts-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-banner-box {
+    height: 250px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  .blog-posts-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}

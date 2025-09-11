@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLOps Episode 2: Advanced Deployment Strategies - Charunthon Limseelo</title>
+
+  <link rel="shortcut icon" href="../assets/images/removelogo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .blog-post-content {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    
+    .blog-post-content h1, .blog-post-content h2, .blog-post-content h3 {
+      color: var(--white-1);
+      margin: 30px 0 15px 0;
+    }
+    
+    .blog-post-content p {
+      color: var(--light-gray);
+      margin-bottom: 20px;
+    }
+    
+    .blog-post-content code {
+      background: var(--smoky-black);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      color: var(--orange-yellow-crayola);
+    }
+    
+    .blog-post-content pre {
+      background: var(--smoky-black);
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    
+    .blog-post-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--light-gray);
+    }
+    
+    .blog-meta-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--jet);
+    }
+    
+    .blog-meta-header .blog-category {
+      display: inline-block;
+      background: var(--orange-yellow-crayola);
+      color: var(--smoky-black);
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: var(--fs-8);
+      font-weight: var(--fw-500);
+      margin-bottom: 10px;
+    }
+    
+    .blog-meta-header time {
+      color: var(--light-gray-70);
+      font-size: var(--fs-7);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <div class="main-content">
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="../index.html" class="navbar-link">← Back to Main</a>
+          </li>
+          <li class="navbar-item">
+            <a href="../index.html#blog" class="navbar-link">← Back to Blog</a>
+          </li>
+        </ul>
+      </nav>
+
+      <article class="blog-post active" data-page="blog-post">
+
+        <header>
+          <h2 class="h2 article-title">MLOps Episode 2: Advanced Deployment Strategies</h2>
+        </header>
+
+        <div class="blog-meta-header">
+          <span class="blog-category">Data Science</span>
+          <br>
+          <time datetime="2025-02-04">February 4, 2025</time>
+        </div>
+
+        <div class="blog-post-content">
+
+          <p>
+            In the rapidly evolving landscape of machine learning operations (MLOps), deployment strategies have become 
+            increasingly sophisticated. Today, we'll explore advanced deployment patterns that can help you safely and 
+            efficiently roll out ML models to production environments.
+          </p>
+
+          <h2>Blue-Green Deployments for ML Models</h2>
+
+          <p>
+            Blue-green deployment is a technique that reduces downtime and risk by running two identical production 
+            environments called Blue and Green. At any time, only one environment is live, serving all production traffic.
+          </p>
+
+          <p>
+            For machine learning models, this approach offers several advantages:
+          </p>
+
+          <ul style="margin-left: 20px; color: var(--light-gray);">
+            <li>Zero-downtime deployments</li>
+            <li>Instant rollback capability</li>
+            <li>Full production testing before switching traffic</li>
+            <li>A/B testing opportunities</li>
+          </ul>
+
+          <h3>Implementation with Azure ML</h3>
+
+          <p>
+            Here's a basic example of implementing blue-green deployments using Azure Machine Learning:
+          </p>
+
+          <pre><code>from azure.ai.ml import MLClient
+from azure.ai.ml.entities import OnlineDeployment
+
+# Create blue deployment
+blue_deployment = OnlineDeployment(
+    name="blue",
+    endpoint_name="model-endpoint",
+    model="model:1",
+    instance_type="Standard_DS2_v2",
+    instance_count=2,
+    traffic_allocation=100  # All traffic initially
+)
+
+# Deploy blue environment
+ml_client.online_deployments.begin_create_or_update(blue_deployment)
+
+# Later, create green deployment with new model
+green_deployment = OnlineDeployment(
+    name="green",
+    endpoint_name="model-endpoint",
+    model="model:2",  # New model version
+    instance_type="Standard_DS2_v2",
+    instance_count=2,
+    traffic_allocation=0  # No traffic initially
+)
+
+ml_client.online_deployments.begin_create_or_update(green_deployment)</code></pre>
+
+          <h2>Canary Releases</h2>
+
+          <p>
+            Canary releases allow you to roll out changes to a small subset of users before making them available to everybody. 
+            This strategy is particularly valuable for ML models where you want to monitor performance metrics closely.
+          </p>
+
+          <h3>Implementing Canary Releases</h3>
+
+          <p>
+            You can gradually shift traffic from the old model to the new model:
+          </p>
+
+          <pre><code># Start with 5% traffic to new model
+ml_client.online_endpoints.begin_create_or_update(
+    endpoint_name="model-endpoint",
+    traffic={"blue": 95, "green": 5}
+)
+
+# Monitor metrics, then increase gradually
+ml_client.online_endpoints.begin_create_or_update(
+    endpoint_name="model-endpoint",
+    traffic={"blue": 80, "green": 20}
+)
+
+# Eventually, full switch
+ml_client.online_endpoints.begin_create_or_update(
+    endpoint_name="model-endpoint",
+    traffic={"blue": 0, "green": 100}
+)</code></pre>
+
+          <h2>A/B Testing for Model Performance</h2>
+
+          <p>
+            A/B testing in the context of ML deployments allows you to compare different model versions or approaches 
+            side by side. This is crucial for understanding which model performs better in real-world scenarios.
+          </p>
+
+          <h3>Key Metrics to Monitor</h3>
+
+          <p>When running A/B tests for ML models, focus on these metrics:</p>
+
+          <ul style="margin-left: 20px; color: var(--light-gray);">
+            <li><strong>Model Performance Metrics:</strong> Accuracy, precision, recall, F1-score</li>
+            <li><strong>Business Metrics:</strong> Conversion rates, user engagement, revenue impact</li>
+            <li><strong>Operational Metrics:</strong> Response time, throughput, error rates</li>
+            <li><strong>Data Quality Metrics:</strong> Data drift, feature importance changes</li>
+          </ul>
+
+          <h2>Monitoring and Observability</h2>
+
+          <p>
+            Regardless of your deployment strategy, comprehensive monitoring is essential. Set up alerts for:
+          </p>
+
+          <ul style="margin-left: 20px; color: var(--light-gray);">
+            <li>Model prediction accuracy degradation</li>
+            <li>Data drift detection</li>
+            <li>Response time increases</li>
+            <li>Error rate spikes</li>
+          </ul>
+
+          <h3>Implementing Model Monitoring</h3>
+
+          <pre><code>from azure.ai.ml.entities import DataDriftMonitor
+
+# Set up data drift monitoring
+drift_monitor = DataDriftMonitor(
+    name="model-drift-monitor",
+    endpoint_name="model-endpoint",
+    deployment_name="green",
+    baseline_dataset="training_data",
+    target_dataset="production_data",
+    schedule_frequency="Daily",
+    alert_threshold=0.3
+)
+
+ml_client.data_drift_monitors.begin_create_or_update(drift_monitor)</code></pre>
+
+          <h2>Best Practices and Recommendations</h2>
+
+          <p>
+            Based on experience deploying ML models in production, here are key recommendations:
+          </p>
+
+          <ol style="margin-left: 20px; color: var(--light-gray);">
+            <li><strong>Start Small:</strong> Begin with canary releases to minimize risk</li>
+            <li><strong>Automate Everything:</strong> Use CI/CD pipelines for consistent deployments</li>
+            <li><strong>Monitor Continuously:</strong> Set up comprehensive monitoring from day one</li>
+            <li><strong>Plan for Rollbacks:</strong> Always have a quick rollback strategy</li>
+            <li><strong>Test in Production-like Environments:</strong> Staging should mirror production</li>
+          </ol>
+
+          <h2>Conclusion</h2>
+
+          <p>
+            Advanced deployment strategies are essential for maintaining reliable ML systems in production. 
+            By implementing blue-green deployments, canary releases, and comprehensive monitoring, 
+            you can significantly reduce the risk associated with model updates while maintaining high availability.
+          </p>
+
+          <p>
+            Remember that the choice of deployment strategy should align with your specific business requirements, 
+            risk tolerance, and operational capabilities. Start with simpler approaches and gradually adopt more 
+            sophisticated patterns as your MLOps maturity increases.
+          </p>
+
+          <p>
+            In the next episode, we'll dive into advanced monitoring and alerting strategies for production ML systems. 
+            Stay tuned!
+          </p>
+
+          <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--jet); text-align: center;">
+            <p style="color: var(--light-gray-70); font-size: var(--fs-7);">
+              <strong>About the Author:</strong> Charunthon Limseelo is a Computer Engineering student at KMUTT 
+              and Microsoft Learn Student Ambassador specializing in AI, ML, and cloud computing.
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+  </main>
+
+  <script src="../assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
